@@ -97,6 +97,7 @@ private:
 
     static inline const unordered_map<byte, const char*> S2P_DEVICE_TYPES = {
         { byte { 0 }, "SCHD" },
+        { byte { 1 }, "SCTP" },
         { byte { 2 }, "SCLP" },
         { byte { 3 }, "SCHS" },
         { byte { 5 }, "SCCD" },
