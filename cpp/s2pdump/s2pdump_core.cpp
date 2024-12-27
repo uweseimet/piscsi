@@ -251,7 +251,7 @@ bool S2pDump::ParseArguments(span<char*> args) // NOSONAR Acceptable complexity 
             throw parser_exception("Invalid sector count: '" + sector_count + "'");
         }
 
-        if (!start_sector.empty() && !!GetAsUnsignedInt(start_sector, start)) {
+        if (!start_sector.empty() && !GetAsUnsignedInt(start_sector, start)) {
             throw parser_exception("Invalid start sector: " + string(optarg));
         }
 
