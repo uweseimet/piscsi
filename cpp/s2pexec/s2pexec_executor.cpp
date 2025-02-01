@@ -76,7 +76,7 @@ int S2pExecExecutor::ExecuteCommand(span<uint8_t> cdb, span<uint8_t> buf, int ti
 {
 #ifdef __linux__
     if (is_sg) {
-        return sg_adapter->SendCommand(cdb, buf, static_cast<int>(buf.size()), timeout).status;
+        return sg_adapter->SendCommand(cdb, buf, static_cast<int>(buf.size()), timeout);
     }
 #endif
 
