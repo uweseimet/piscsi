@@ -88,7 +88,7 @@ tuple<SenseKey, Asc, int> S2pExecExecutor::GetSenseData() const
 #ifdef __linux__
     if (is_sg) {
         array<uint8_t, 14> sense_data;
-        vector<uint8_t> cdb(6);
+        array<uint8_t, 6> cdb = { };
         cdb[0] = static_cast<uint8_t>(ScsiCommand::REQUEST_SENSE);
         cdb[4] = static_cast<uint8_t>(sense_data.size());
 
