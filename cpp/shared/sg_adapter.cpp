@@ -27,9 +27,9 @@ string SgAdapter::Init(const string &d)
         return e.what();
     }
 
-    GetBlockSize();
-
     device = d;
+
+    GetBlockSize();
 
     return "";
 }
